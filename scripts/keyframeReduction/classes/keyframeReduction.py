@@ -9,6 +9,9 @@ from ..utils import floatRange, THRESHOLD
 
 class KeyframeReduction(object):
     def __init__(self, path):
+        """
+        :param str path:
+        """
         self._path = path
 
     def __repr__(self):

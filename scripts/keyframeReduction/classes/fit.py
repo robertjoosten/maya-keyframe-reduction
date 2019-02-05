@@ -6,7 +6,16 @@ from ..utils import EPSILON
 
 
 class FitBezier(object):
+    """
+    Ported from Paper.js - The Swiss Army Knife of Vector Graphics Scripting.
+    http://paperjs.org/
+    """
     def __init__(self, points, error=2.5, weightedTangents=True):
+        """
+        :param list points:
+        :param int/float error:
+        :param bool weightedTangents:
+        """
         # variables
         self._keyframes = []
         self._points = points

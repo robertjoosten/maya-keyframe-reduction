@@ -1,5 +1,10 @@
 class Keyframe(object):
     def __init__(self, point, inHandle=None, outHandle=None):
+        """
+        :param Vector2D point:
+        :param Vector2D inHandle:
+        :param Vector2D outHandle:
+        """
         self._point = point
         self._inHandle = inHandle
         self._outHandle = outHandle
