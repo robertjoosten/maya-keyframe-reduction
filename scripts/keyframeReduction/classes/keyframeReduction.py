@@ -330,7 +330,10 @@ class KeyframeReduction(object):
 
         # only set values if the curve can be optimized.
         if len(keyframes) >= len(original):
-            print "< KeyframeReduction.reduce() | path: {0} | process-time: {1:,.2f} seconds | unable-to-reduce >".format(self.path, time.time() - t)
+            print "< KeyframeReduction.reduce() " \
+                "| path: {0} " \
+                "| process-time: {1:,.2f} seconds " \
+                "| unable-to-reduce >".format(self.path, time.time() - t)
             return
 
         # remove all keys but the first one and add keyframes
@@ -338,5 +341,12 @@ class KeyframeReduction(object):
         self._addKeys(keyframes, weightedTangents)
 
         # print reduction rate
-        rate = len(keyframes) / float(len(original))
-        print "< KeyframeReduction.reduce() | path: {0} | process-time: {1:,.2f} seconds | reduction-rate: {2:,.2f}%  >".format(self.path, time.time() - t, rate)
+        rate = (len(keyframes) / float(len(original))) * 100
+        print "< KeyframeReduction.reduce() " \
+            "| path: {0} " \
+            "| process-time: {1:,.2f} seconds " \
+            "| reduction-rate: {2:,.2f}%  >".format(
+                self.path,
+                time.time() - t,
+                100 - rate
+            )
