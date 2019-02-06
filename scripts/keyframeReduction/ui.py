@@ -3,7 +3,7 @@ from functools import partial
 from maya import cmds, OpenMaya, OpenMayaUI
 
 from . import utils
-from .classes. keyframeReduction import KeyframeReduction
+from .classes.keyframeReduction import KeyframeReduction
 
 
 # ----------------------------------------------------------------------------

@@ -254,7 +254,7 @@ class FitBezier(object):
                 elif abs(c1) > epsilon:
                     alpha1 = alpha2 = X[1] / c1
 
-                    # if alpha negative, use the Wu/Barsky heuristic (see text)
+        # if alpha negative, use the Wu/Barsky heuristic (see text)
         # (if alpha is 0, you get coincident control points that lead to
         # divide by zero in any subsequent NewtonRaphsonRootFind() call.
         segLength = pt2.distanceBetween(pt1)
