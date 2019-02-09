@@ -55,6 +55,11 @@ Options
 * **tangentSplitExisting**: Use existing keyframes that have split tangents.
 * **tangentSplitAngleThreshold**: Split tangents based on an angle threshold.
 * **tangentSplitAngleThresholdValue**: Split tangent angle value.
+
+Note
+====
+The fitting algorithm is ported from Paper.js - The Swiss Army Knife of Vector Graphics Scripting.
+http://paperjs.org/
 """
 from .classes.keyframeReduction import KeyframeReduction
 
