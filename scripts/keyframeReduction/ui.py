@@ -466,20 +466,32 @@ class KeyframeReductionWidget(QWidget):
         # set icon
         self.setWindowFlags(Qt.Window)   
         self.setWindowIcon(QIcon(getIconPath("KR_icon.png")))
+
+        # create layouts
+        vLayout = QVBoxLayout(self)
+        vLayout.setContentsMargins(5, 5, 5, 5)
+        vLayout.setSpacing(5)
                 
-        layout = QHBoxLayout(self)
-        layout.setContentsMargins(5, 5, 5, 5)
-        layout.setSpacing(5)
+        hLayout = QHBoxLayout(self)
+        hLayout.setContentsMargins(0, 0, 0, 0)
+        hLayout.setSpacing(5)
+
+        vLayout.addLayout(hLayout)
 
         # add filter
         self.filter = AnimationCurvesFilterWidget(self)
         self.filter.registerCallback()
-        layout.addWidget(self.filter)
+        hLayout.addWidget(self.filter)
 
         # add settings
         self.settings = ReductionSettingsWidget(self)
         self.settings.reduceReleased.connect(self.reduce)
-        layout.addWidget(self.settings)
+        hLayout.addWidget(self.settings)
+
+        # add progress
+        self.progress = QProgressBar(self)
+        self.progress.setFont(FONT)
+        vLayout.addWidget(self.progress)
 
     # ------------------------------------------------------------------------
 
@@ -493,12 +505,20 @@ class KeyframeReductionWidget(QWidget):
         animationCurves = self.filter.getAnimationCurves()
         settings = self.settings.getSettings()
 
+        # setup progress
+        num = len(animationCurves)
+        self.progress.setRange(0, num)
+
         # wrap reduction in undo chunk
         with utils.UndoChunkContext():
             # reduce keyframes
-            for animationCurve in animationCurves:
+            for i, animationCurve in enumerate(animationCurves):
                 r = KeyframeReduction(animationCurve)
                 r.reduce(**settings)
+
+                # increment progress
+                self.progress.setFormat(animationCurve)
+                self.progress.setValue(i+1)
 
     # ------------------------------------------------------------------------
 
