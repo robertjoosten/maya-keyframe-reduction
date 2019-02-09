@@ -38,7 +38,7 @@ obj = KeyframeReduction(pathToAnimCurve)
 obj.reduce(error=0.1)
 ```
 
-### Command Line
+### Options
 * **error**: The maximum amount the reduced curve is allowed to deviate from the sampled curve.
 * **step**: The step size to sample the curve, default is set to one.
 * **weightedTangents**: Reduce curve using weighted tangents, using weighted tangents will result in less keyframes.
