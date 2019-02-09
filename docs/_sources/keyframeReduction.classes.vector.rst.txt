@@ -1,0 +1,7 @@
+keyframeReduction\.classes\.vector module
+=========================================
+
+.. automodule:: keyframeReduction.classes.vector
+    :members:
+    :undoc-members:
+    :show-inheritance:

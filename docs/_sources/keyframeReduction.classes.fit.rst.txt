@@ -1,0 +1,7 @@
+keyframeReduction\.classes\.fit module
+======================================
+
+.. automodule:: keyframeReduction.classes.fit
+    :members:
+    :undoc-members:
+    :show-inheritance:

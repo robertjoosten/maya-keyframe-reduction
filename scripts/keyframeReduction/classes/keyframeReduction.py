@@ -286,7 +286,7 @@ class KeyframeReduction(object):
             tangentSplitAngleThresholdValue=15.0,
     ):
         """
-        Reduce the number of keyframes on the animation curve. Usefull when
+        Reduce the number of keyframes on the animation curve. Useful when
         you are working with baked curves.
 
         :param int/float error:

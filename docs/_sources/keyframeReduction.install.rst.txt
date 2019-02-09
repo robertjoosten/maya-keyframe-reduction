@@ -1,0 +1,7 @@
+keyframeReduction\.install module
+=================================
+
+.. automodule:: keyframeReduction.install
+    :members:
+    :undoc-members:
+    :show-inheritance:

@@ -1,0 +1,393 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>keyframeReduction.ui module &#8212; keyframeReduction  &#39;&#39; documentation</title>
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     ' &#39;&#39;',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+  </head>
+  <body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">keyframeReduction  &#39;&#39; documentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-keyframeReduction.ui">
+<span id="keyframereduction-ui-module"></span><h1>keyframeReduction.ui module<a class="headerlink" href="#module-keyframeReduction.ui" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="keyframeReduction.ui.AnimationCurvesFilterWidget">
+<em class="property">class </em><code class="descclassname">keyframeReduction.ui.</code><code class="descname">AnimationCurvesFilterWidget</code><span class="sig-paren">(</span><em>parent</em><span class="sig-paren">)</span><a class="headerlink" href="#keyframeReduction.ui.AnimationCurvesFilterWidget" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">PySide.QtGui.QWidget</span></code></p>
+<dl class="method">
+<dt id="keyframeReduction.ui.AnimationCurvesFilterWidget.addPlugCheckbox">
+<code class="descname">addPlugCheckbox</code><span class="sig-paren">(</span><em>plug</em><span class="sig-paren">)</span><a class="headerlink" href="#keyframeReduction.ui.AnimationCurvesFilterWidget.addPlugCheckbox" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a plug checkbox to the scroll layout. The checked state
+determines if the plugs animation curves are to be reduced.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>plug</strong> (<em>str</em>) – </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="keyframeReduction.ui.AnimationCurvesFilterWidget.clear">
+<code class="descname">clear</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#keyframeReduction.ui.AnimationCurvesFilterWidget.clear" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove all of the widgets from the layout apart from the last item
+which is a spacer item.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="keyframeReduction.ui.AnimationCurvesFilterWidget.getAnimationCurves">
+<code class="descname">getAnimationCurves</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#keyframeReduction.ui.AnimationCurvesFilterWidget.getAnimationCurves" title="Permalink to this definition">¶</a></dt>
+<dd><p>Loop over the selected animation curves and only return the ones that
+have the checked state set to true.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Animation curves</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">list</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="keyframeReduction.ui.AnimationCurvesFilterWidget.plugDefaults">
+<code class="descname">plugDefaults</code><a class="headerlink" href="#keyframeReduction.ui.AnimationCurvesFilterWidget.plugDefaults" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of default plugs that are presented in order in case they are
+part of the selected plugs. This ensures the keys that are most likely
+to be reduced to appear on top.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Default plugs</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">list</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="keyframeReduction.ui.AnimationCurvesFilterWidget.plugFilteredAnimationCurves">
+<code class="descname">plugFilteredAnimationCurves</code><a class="headerlink" href="#keyframeReduction.ui.AnimationCurvesFilterWidget.plugFilteredAnimationCurves" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Filtered animation curves</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">dict</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="keyframeReduction.ui.AnimationCurvesFilterWidget.plugMaxLength">
+<code class="descname">plugMaxLength</code><a class="headerlink" href="#keyframeReduction.ui.AnimationCurvesFilterWidget.plugMaxLength" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Max length of plug string</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="keyframeReduction.ui.AnimationCurvesFilterWidget.plugStates">
+<code class="descname">plugStates</code><a class="headerlink" href="#keyframeReduction.ui.AnimationCurvesFilterWidget.plugStates" title="Permalink to this definition">¶</a></dt>
+<dd><p>A dictionary containing plugs as keys and its checked state as a
+value. This dictionary is used to maintain the checked state of plugs
+between selections.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Plug states</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">dict</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="keyframeReduction.ui.AnimationCurvesFilterWidget.registerCallback">
+<code class="descname">registerCallback</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#keyframeReduction.ui.AnimationCurvesFilterWidget.registerCallback" title="Permalink to this definition">¶</a></dt>
+<dd><p>Register callback that will update the ui everytime the selection has
+changed.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="keyframeReduction.ui.AnimationCurvesFilterWidget.removeCallback">
+<code class="descname">removeCallback</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#keyframeReduction.ui.AnimationCurvesFilterWidget.removeCallback" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="keyframeReduction.ui.AnimationCurvesFilterWidget.selectAllAnimationCurves">
+<code class="descname">selectAllAnimationCurves</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#keyframeReduction.ui.AnimationCurvesFilterWidget.selectAllAnimationCurves" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get all suitable animation curves in the scene and select them.
+Suitable curves are curves that are not referenced and not driven
+keys.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="keyframeReduction.ui.AnimationCurvesFilterWidget.selectionChanged">
+<code class="descname">selectionChanged</code><span class="sig-paren">(</span><em>*args</em><span class="sig-paren">)</span><a class="headerlink" href="#keyframeReduction.ui.AnimationCurvesFilterWidget.selectionChanged" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function gets called each time the selection is changed. It will
+update the UI to reflect the selected animation curves.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="keyframeReduction.ui.AnimationCurvesFilterWidget.staticMetaObject">
+<code class="descname">staticMetaObject</code><em class="property"> = &lt;PySide.QtCore.QMetaObject object&gt;</em><a class="headerlink" href="#keyframeReduction.ui.AnimationCurvesFilterWidget.staticMetaObject" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="keyframeReduction.ui.AnimationCurvesFilterWidget.updatePlugState">
+<code class="descname">updatePlugState</code><span class="sig-paren">(</span><em>plug</em>, <em>state</em><span class="sig-paren">)</span><a class="headerlink" href="#keyframeReduction.ui.AnimationCurvesFilterWidget.updatePlugState" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update the plugStates dictionary of the provided plug with the
+provided value. This will help the state persist between selection.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>plug</strong> (<em>str</em>) – </li>
+<li><strong>state</strong> (<em>bool</em>) – </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="keyframeReduction.ui.CheckBox">
+<em class="property">class </em><code class="descclassname">keyframeReduction.ui.</code><code class="descname">CheckBox</code><span class="sig-paren">(</span><em>parent</em>, <em>text</em>, <em>state</em><span class="sig-paren">)</span><a class="headerlink" href="#keyframeReduction.ui.CheckBox" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">PySide.QtGui.QCheckBox</span></code></p>
+<dl class="attribute">
+<dt id="keyframeReduction.ui.CheckBox.staticMetaObject">
+<code class="descname">staticMetaObject</code><em class="property"> = &lt;PySide.QtCore.QMetaObject object&gt;</em><a class="headerlink" href="#keyframeReduction.ui.CheckBox.staticMetaObject" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="keyframeReduction.ui.Divider">
+<em class="property">class </em><code class="descclassname">keyframeReduction.ui.</code><code class="descname">Divider</code><span class="sig-paren">(</span><em>parent</em><span class="sig-paren">)</span><a class="headerlink" href="#keyframeReduction.ui.Divider" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">PySide.QtGui.QFrame</span></code></p>
+<dl class="attribute">
+<dt id="keyframeReduction.ui.Divider.staticMetaObject">
+<code class="descname">staticMetaObject</code><em class="property"> = &lt;PySide.QtCore.QMetaObject object&gt;</em><a class="headerlink" href="#keyframeReduction.ui.Divider.staticMetaObject" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="keyframeReduction.ui.Header">
+<em class="property">class </em><code class="descclassname">keyframeReduction.ui.</code><code class="descname">Header</code><span class="sig-paren">(</span><em>parent</em>, <em>text</em><span class="sig-paren">)</span><a class="headerlink" href="#keyframeReduction.ui.Header" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">PySide.QtGui.QLabel</span></code></p>
+<dl class="attribute">
+<dt id="keyframeReduction.ui.Header.staticMetaObject">
+<code class="descname">staticMetaObject</code><em class="property"> = &lt;PySide.QtCore.QMetaObject object&gt;</em><a class="headerlink" href="#keyframeReduction.ui.Header.staticMetaObject" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="keyframeReduction.ui.KeyframeReductionWidget">
+<em class="property">class </em><code class="descclassname">keyframeReduction.ui.</code><code class="descname">KeyframeReductionWidget</code><span class="sig-paren">(</span><em>parent</em><span class="sig-paren">)</span><a class="headerlink" href="#keyframeReduction.ui.KeyframeReductionWidget" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">PySide.QtGui.QWidget</span></code></p>
+<dl class="method">
+<dt id="keyframeReduction.ui.KeyframeReductionWidget.closeEvent">
+<code class="descname">closeEvent</code><span class="sig-paren">(</span><em>event</em><span class="sig-paren">)</span><a class="headerlink" href="#keyframeReduction.ui.KeyframeReductionWidget.closeEvent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="keyframeReduction.ui.KeyframeReductionWidget.reduce">
+<code class="descname">reduce</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#keyframeReduction.ui.KeyframeReductionWidget.reduce" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the animation curves and settings from the ui and reduce the
+keyframes on each of those animation curves using the provided
+settings.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="keyframeReduction.ui.KeyframeReductionWidget.staticMetaObject">
+<code class="descname">staticMetaObject</code><em class="property"> = &lt;PySide.QtCore.QMetaObject object&gt;</em><a class="headerlink" href="#keyframeReduction.ui.KeyframeReductionWidget.staticMetaObject" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="keyframeReduction.ui.LabelWidget">
+<em class="property">class </em><code class="descclassname">keyframeReduction.ui.</code><code class="descname">LabelWidget</code><span class="sig-paren">(</span><em>parent</em>, <em>text</em>, <em>widget</em><span class="sig-paren">)</span><a class="headerlink" href="#keyframeReduction.ui.LabelWidget" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">PySide.QtGui.QWidget</span></code></p>
+<dl class="attribute">
+<dt id="keyframeReduction.ui.LabelWidget.staticMetaObject">
+<code class="descname">staticMetaObject</code><em class="property"> = &lt;PySide.QtCore.QMetaObject object&gt;</em><a class="headerlink" href="#keyframeReduction.ui.LabelWidget.staticMetaObject" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="keyframeReduction.ui.ReductionSettingsWidget">
+<em class="property">class </em><code class="descclassname">keyframeReduction.ui.</code><code class="descname">ReductionSettingsWidget</code><span class="sig-paren">(</span><em>parent</em><span class="sig-paren">)</span><a class="headerlink" href="#keyframeReduction.ui.ReductionSettingsWidget" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">PySide.QtGui.QWidget</span></code></p>
+<dl class="method">
+<dt id="keyframeReduction.ui.ReductionSettingsWidget.getSettings">
+<code class="descname">getSettings</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#keyframeReduction.ui.ReductionSettingsWidget.getSettings" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Reduce settings</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">dict</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="keyframeReduction.ui.ReductionSettingsWidget.reduceReleased">
+<code class="descname">reduceReleased</code><em class="property"> = &lt;PySide.QtCore.Signal object&gt;</em><a class="headerlink" href="#keyframeReduction.ui.ReductionSettingsWidget.reduceReleased" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="keyframeReduction.ui.ReductionSettingsWidget.staticMetaObject">
+<code class="descname">staticMetaObject</code><em class="property"> = &lt;PySide.QtCore.QMetaObject object&gt;</em><a class="headerlink" href="#keyframeReduction.ui.ReductionSettingsWidget.staticMetaObject" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="keyframeReduction.ui.getIconPath">
+<code class="descclassname">keyframeReduction.ui.</code><code class="descname">getIconPath</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#keyframeReduction.ui.getIconPath" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an icon path based on file name. All paths in the XBMLANGPATH variable
+processed to see if the provided icon can be found.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>name</strong> (<em>str</em>) – </td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Icon path</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str/None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="keyframeReduction.ui.mayaWindow">
+<code class="descclassname">keyframeReduction.ui.</code><code class="descname">mayaWindow</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#keyframeReduction.ui.mayaWindow" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get Maya’s main window.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">QMainWindow</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="keyframeReduction.ui.show">
+<code class="descclassname">keyframeReduction.ui.</code><code class="descname">show</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#keyframeReduction.ui.show" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/keyframeReduction.ui.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">keyframeReduction  &#39;&#39; documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019, &#39;Robert Joosten&#39;.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.4.
+    </div>
+  </body>
+</html>

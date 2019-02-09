@@ -1,0 +1,18 @@
+keyframeReduction\.classes package
+==================================
+
+.. automodule:: keyframeReduction.classes
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+Submodules
+----------
+
+.. toctree::
+
+   keyframeReduction.classes.fit
+   keyframeReduction.classes.keyframe
+   keyframeReduction.classes.keyframeReduction
+   keyframeReduction.classes.vector
+

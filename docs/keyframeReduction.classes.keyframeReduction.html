@@ -1,0 +1,212 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>keyframeReduction.classes.keyframeReduction module &#8212; keyframeReduction  &#39;&#39; documentation</title>
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     ' &#39;&#39;',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+  </head>
+  <body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">keyframeReduction  &#39;&#39; documentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-keyframeReduction.classes.keyframeReduction">
+<span id="keyframereduction-classes-keyframereduction-module"></span><h1>keyframeReduction.classes.keyframeReduction module<a class="headerlink" href="#module-keyframeReduction.classes.keyframeReduction" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="keyframeReduction.classes.keyframeReduction.KeyframeReduction">
+<em class="property">class </em><code class="descclassname">keyframeReduction.classes.keyframeReduction.</code><code class="descname">KeyframeReduction</code><span class="sig-paren">(</span><em>path</em><span class="sig-paren">)</span><a class="headerlink" href="#keyframeReduction.classes.keyframeReduction.KeyframeReduction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<dl class="method">
+<dt id="keyframeReduction.classes.keyframeReduction.KeyframeReduction.getFrames">
+<code class="descname">getFrames</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#keyframeReduction.classes.keyframeReduction.KeyframeReduction.getFrames" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">List of keyframe frames</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">list</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="keyframeReduction.classes.keyframeReduction.KeyframeReduction.getIndices">
+<code class="descname">getIndices</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#keyframeReduction.classes.keyframeReduction.KeyframeReduction.getIndices" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">List of keyframe indices</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">list</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="keyframeReduction.classes.keyframeReduction.KeyframeReduction.getValues">
+<code class="descname">getValues</code><span class="sig-paren">(</span><em>frames</em><span class="sig-paren">)</span><a class="headerlink" href="#keyframeReduction.classes.keyframeReduction.KeyframeReduction.getValues" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>frames</strong> (<em>list</em>) – Frames to sample</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">List of values</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">list</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="keyframeReduction.classes.keyframeReduction.KeyframeReduction.path">
+<code class="descname">path</code><a class="headerlink" href="#keyframeReduction.classes.keyframeReduction.KeyframeReduction.path" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Animation curve path</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="keyframeReduction.classes.keyframeReduction.KeyframeReduction.reduce">
+<code class="descname">reduce</code><span class="sig-paren">(</span><em>error=1</em>, <em>step=1</em>, <em>weightedTangents=True</em>, <em>tangentSplitAuto=False</em>, <em>tangentSplitExisting=False</em>, <em>tangentSplitAngleThreshold=False</em>, <em>tangentSplitAngleThresholdValue=15.0</em><span class="sig-paren">)</span><a class="headerlink" href="#keyframeReduction.classes.keyframeReduction.KeyframeReduction.reduce" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reduce the number of keyframes on the animation curve. Useful when
+you are working with baked curves.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>error</strong> (<em>int/float</em>) – </li>
+<li><strong>step</strong> (<em>int/float</em>) – </li>
+<li><strong>weightedTangents</strong> (<em>bool</em>) – </li>
+<li><strong>tangentSplitAuto</strong> (<em>bool</em>) – </li>
+<li><strong>tangentSplitExisting</strong> (<em>bool</em>) – </li>
+<li><strong>tangentSplitAngleThreshold</strong> (<em>bool</em>) – </li>
+<li><strong>tangentSplitAngleThresholdValue</strong> (<em>int/float</em>) – </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="keyframeReduction.classes.keyframeReduction.KeyframeReduction.sample">
+<code class="descname">sample</code><span class="sig-paren">(</span><em>start</em>, <em>end</em>, <em>step</em><span class="sig-paren">)</span><a class="headerlink" href="#keyframeReduction.classes.keyframeReduction.KeyframeReduction.sample" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sample the current animation curve based on the start and end frame,
+and the provided step size. Vector2Ds and angles will be returned.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>start</strong> (<em>int</em>) – </li>
+<li><strong>end</strong> (<em>int</em>) – </li>
+<li><strong>step</strong> (<em>int/float</em>) – </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Sample points and angles</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">list</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/keyframeReduction.classes.keyframeReduction.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">keyframeReduction  &#39;&#39; documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019, &#39;Robert Joosten&#39;.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.4.
+    </div>
+  </body>
+</html>

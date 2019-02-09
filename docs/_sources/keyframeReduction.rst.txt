@@ -1,0 +1,24 @@
+keyframeReduction package
+=========================
+
+.. automodule:: keyframeReduction
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+Subpackages
+-----------
+
+.. toctree::
+
+    keyframeReduction.classes
+
+Submodules
+----------
+
+.. toctree::
+
+   keyframeReduction.install
+   keyframeReduction.ui
+   keyframeReduction.utils
+

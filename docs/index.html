@@ -1,0 +1,193 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>keyframeReduction package &#8212; keyframeReduction  &#39;&#39; documentation</title>
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     ' &#39;&#39;',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+  </head>
+  <body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">keyframeReduction  &#39;&#39; documentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-keyframeReduction">
+<span id="keyframereduction-package"></span><h1>keyframeReduction package<a class="headerlink" href="#module-keyframeReduction" title="Permalink to this headline">¶</a></h1>
+<p>Keyframe Reduction for Maya using least-squares method.</p>
+<div class="figure align-center">
+<img alt="_images/keyframeReductionExample.gif" src="_images/keyframeReductionExample.gif" />
+</div>
+<div class="section" id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Extract the content of the .rar file anywhere on disk.</li>
+<li>Drag the keyframeReduction.mel file in Maya to permanently install the script.</li>
+</ul>
+</div>
+<div class="section" id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
+<p>A button on the MiscTools shelf will be created that will allow easy access to
+the ui, this way the user doesn’t need to worry about any of the code. If user
+wishes to not use the shelf button the following commands can be used.</p>
+<p>The ui responds to the current selection where it finds all of the suitable
+animation curves for reduction. You will be able to filter the animation
+curves based on the plug it is connected to. This will make it easier to
+target exactly the curves you want to reduce.</p>
+<p>After an animation curve is reduced the reduction percentage will be printed
+to the console. This can give you an idea if you would like to increase or
+decrease the error rate to get the desired results.</p>
+<div class="section" id="ui">
+<h3>UI<a class="headerlink" href="#ui" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-center">
+<img alt="_images/keyframeReductionUI.png" src="_images/keyframeReductionUI.png" />
+</div>
+<p>Display the UI with the following code.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">keyframeReduction.ui</span>
+<span class="n">keyframeReduction</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="command-line">
+<h3>Command Line<a class="headerlink" href="#command-line" title="Permalink to this headline">¶</a></h3>
+<p>Use the KeyframeReduction class on individual animation curves.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">keyframeReduction</span> <span class="k">import</span> <span class="n">KeyframeReduction</span>
+<span class="n">obj</span> <span class="o">=</span> <span class="n">KeyframeReduction</span><span class="p">(</span><span class="n">pathToAnimCurve</span><span class="p">)</span>
+<span class="n">obj</span><span class="o">.</span><span class="n">reduce</span><span class="p">(</span><span class="n">error</span><span class="o">=</span><span class="mf">0.1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="options">
+<h3>Options<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><strong>error</strong>: The maximum amount the reduced curve is allowed to deviate from the sampled curve.</li>
+<li><strong>step</strong>: The step size to sample the curve, default is set to one.</li>
+<li><strong>weightedTangents</strong>: Reduce curve using weighted tangents, using weighted tangents will result in less keyframes.</li>
+<li><strong>tangentSplitAuto</strong>: Automatically split tangents.</li>
+<li><strong>tangentSplitExisting</strong>: Use existing keyframes that have split tangents.</li>
+<li><strong>tangentSplitAngleThreshold</strong>: Split tangents based on an angle threshold.</li>
+<li><strong>tangentSplitAngleThresholdValue</strong>: Split tangent angle value.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="keyframeReduction.classes.html">keyframeReduction.classes package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="keyframeReduction.classes.html#submodules">Submodules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="keyframeReduction.classes.fit.html">keyframeReduction.classes.fit module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="keyframeReduction.classes.keyframe.html">keyframeReduction.classes.keyframe module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="keyframeReduction.classes.keyframeReduction.html">keyframeReduction.classes.keyframeReduction module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="keyframeReduction.classes.vector.html">keyframeReduction.classes.vector module</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="keyframeReduction.install.html">keyframeReduction.install module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="keyframeReduction.ui.html">keyframeReduction.ui module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="keyframeReduction.utils.html">keyframeReduction.utils module</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">keyframeReduction package</a><ul>
+<li><a class="reference internal" href="#installation">Installation</a></li>
+<li><a class="reference internal" href="#usage">Usage</a><ul>
+<li><a class="reference internal" href="#ui">UI</a></li>
+<li><a class="reference internal" href="#command-line">Command Line</a></li>
+<li><a class="reference internal" href="#options">Options</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#subpackages">Subpackages</a></li>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+</ul>
+</li>
+</ul>
+
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/keyframeReduction.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">keyframeReduction  &#39;&#39; documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019, &#39;Robert Joosten&#39;.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.4.
+    </div>
+  </body>
+</html>

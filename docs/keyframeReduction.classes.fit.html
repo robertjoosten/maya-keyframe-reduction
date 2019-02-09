@@ -1,0 +1,369 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>keyframeReduction.classes.fit module &#8212; keyframeReduction  &#39;&#39; documentation</title>
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     ' &#39;&#39;',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+  </head>
+  <body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">keyframeReduction  &#39;&#39; documentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-keyframeReduction.classes.fit">
+<span id="keyframereduction-classes-fit-module"></span><h1>keyframeReduction.classes.fit module<a class="headerlink" href="#module-keyframeReduction.classes.fit" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="keyframeReduction.classes.fit.FitBezier">
+<em class="property">class </em><code class="descclassname">keyframeReduction.classes.fit.</code><code class="descname">FitBezier</code><span class="sig-paren">(</span><em>points</em>, <em>error=2.5</em>, <em>weightedTangents=True</em><span class="sig-paren">)</span><a class="headerlink" href="#keyframeReduction.classes.fit.FitBezier" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Ported from Paper.js - The Swiss Army Knife of Vector Graphics Scripting.
+<a class="reference external" href="http://paperjs.org/">http://paperjs.org/</a></p>
+<dl class="method">
+<dt id="keyframeReduction.classes.fit.FitBezier.addCurve">
+<code class="descname">addCurve</code><span class="sig-paren">(</span><em>pt1</em>, <em>tan1</em>, <em>tan2</em>, <em>pt2</em><span class="sig-paren">)</span><a class="headerlink" href="#keyframeReduction.classes.fit.FitBezier.addCurve" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>pt1</strong> (<em>Vector2D</em>) – </li>
+<li><strong>tan1</strong> (<em>Vector2D</em>) – </li>
+<li><strong>tan2</strong> (<em>Vector2D</em>) – </li>
+<li><strong>pt2</strong> (<em>Vector2D</em>) – </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="keyframeReduction.classes.fit.FitBezier.chordLengthParameterize">
+<code class="descname">chordLengthParameterize</code><span class="sig-paren">(</span><em>first</em>, <em>last</em><span class="sig-paren">)</span><a class="headerlink" href="#keyframeReduction.classes.fit.FitBezier.chordLengthParameterize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Assign parameter values to digitized points using relative distances
+between points.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>first</strong> (<em>int</em>) – </li>
+<li><strong>last</strong> (<em>int</em>) – </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Chord length parameterization</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">dict</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="keyframeReduction.classes.fit.FitBezier.error">
+<code class="descname">error</code><a class="headerlink" href="#keyframeReduction.classes.fit.FitBezier.error" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Maximum error</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">int/float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="keyframeReduction.classes.fit.FitBezier.evaluate">
+<code class="descname">evaluate</code><span class="sig-paren">(</span><em>degree</em>, <em>curve</em>, <em>t</em><span class="sig-paren">)</span><a class="headerlink" href="#keyframeReduction.classes.fit.FitBezier.evaluate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluate a bezier curve at a particular parameter value.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>degree</strong> (<em>int</em>) – </li>
+<li><strong>curve</strong> (<em>list</em>) – </li>
+<li><strong>t</strong> (<em>float</em>) – </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Point on curve</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">Vector2D</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="keyframeReduction.classes.fit.FitBezier.findMaxError">
+<code class="descname">findMaxError</code><span class="sig-paren">(</span><em>first</em>, <em>last</em>, <em>curve</em>, <em>u</em><span class="sig-paren">)</span><a class="headerlink" href="#keyframeReduction.classes.fit.FitBezier.findMaxError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Find the maximum squared distance of digitized points to fitted
+curve.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>first</strong> (<em>int</em>) – </li>
+<li><strong>last</strong> (<em>int</em>) – </li>
+<li><strong>curve</strong> (<em>list</em>) – </li>
+<li><strong>u</strong> (<em>dict</em>) – </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Max distance and max index</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">tuple</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="keyframeReduction.classes.fit.FitBezier.findRoot">
+<code class="descname">findRoot</code><span class="sig-paren">(</span><em>curve</em>, <em>point</em>, <em>u</em><span class="sig-paren">)</span><a class="headerlink" href="#keyframeReduction.classes.fit.FitBezier.findRoot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use Newton-Raphson iteration to find better root.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>curve</strong> (<em>list</em>) – </li>
+<li><strong>point</strong> (<em>Vector2D</em>) – </li>
+<li><strong>u</strong> (<em>Vector2D</em>) – </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">New root point</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">Vector2D</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="keyframeReduction.classes.fit.FitBezier.fit">
+<code class="descname">fit</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#keyframeReduction.classes.fit.FitBezier.fit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fit bezier curves to the points based on the provided maximum error
+value and the bezier weighted tangents.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Keyframes</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">list</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="keyframeReduction.classes.fit.FitBezier.fitCubic">
+<code class="descname">fitCubic</code><span class="sig-paren">(</span><em>first</em>, <em>last</em>, <em>tan1</em>, <em>tan2</em><span class="sig-paren">)</span><a class="headerlink" href="#keyframeReduction.classes.fit.FitBezier.fitCubic" title="Permalink to this definition">¶</a></dt>
+<dd><p>But a cubic bezier points between the provided first and last index
+and it’s tangents. Based in the weighted tangent settings the
+iterations will be adjusted to gain speed. If a curve can be matched
+the curve will be added to the keyframes, if not the curve will be
+split at the point of max error and the function will be called
+again.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>first</strong> (<em>int</em>) – </li>
+<li><strong>last</strong> (<em>int</em>) – </li>
+<li><strong>tan1</strong> (<em>Vector2D</em>) – </li>
+<li><strong>tan2</strong> (<em>Vector2D</em>) – </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="keyframeReduction.classes.fit.FitBezier.generateBezier">
+<code class="descname">generateBezier</code><span class="sig-paren">(</span><em>first</em>, <em>last</em>, <em>uPrime</em>, <em>tan1</em>, <em>tan2</em><span class="sig-paren">)</span><a class="headerlink" href="#keyframeReduction.classes.fit.FitBezier.generateBezier" title="Permalink to this definition">¶</a></dt>
+<dd><p>Based on the weighted tangent setting either use a least-squares
+method to find Bezier controls points for a region or use Wu/Barsky
+heuristic.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>first</strong> (<em>int</em>) – </li>
+<li><strong>last</strong> (<em>int</em>) – </li>
+<li><strong>uPrime</strong> (<em>dict</em>) – </li>
+<li><strong>tan1</strong> (<em>Vector2D</em>) – </li>
+<li><strong>tan2</strong> (<em>Vector2D</em>) – </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="keyframeReduction.classes.fit.FitBezier.keyframes">
+<code class="descname">keyframes</code><a class="headerlink" href="#keyframeReduction.classes.fit.FitBezier.keyframes" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Keyframes</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">list</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="keyframeReduction.classes.fit.FitBezier.points">
+<code class="descname">points</code><a class="headerlink" href="#keyframeReduction.classes.fit.FitBezier.points" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Vector2Ds</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">list</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="keyframeReduction.classes.fit.FitBezier.reparameterize">
+<code class="descname">reparameterize</code><span class="sig-paren">(</span><em>first</em>, <em>last</em>, <em>u</em>, <em>curve</em><span class="sig-paren">)</span><a class="headerlink" href="#keyframeReduction.classes.fit.FitBezier.reparameterize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given set of points and their parameterization, try to find a better
+parameterization.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>first</strong> (<em>int</em>) – </li>
+<li><strong>last</strong> (<em>int</em>) – </li>
+<li><strong>u</strong> (<em>dict</em>) – </li>
+<li><strong>curve</strong> (<em>list</em>) – </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="keyframeReduction.classes.fit.FitBezier.weightedTangents">
+<code class="descname">weightedTangents</code><a class="headerlink" href="#keyframeReduction.classes.fit.FitBezier.weightedTangents" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Weighted tangents</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/keyframeReduction.classes.fit.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">keyframeReduction  &#39;&#39; documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019, &#39;Robert Joosten&#39;.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.4.
+    </div>
+  </body>
+</html>

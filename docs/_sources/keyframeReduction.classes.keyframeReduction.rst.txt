@@ -1,0 +1,7 @@
+keyframeReduction\.classes\.keyframeReduction module
+====================================================
+
+.. automodule:: keyframeReduction.classes.keyframeReduction
+    :members:
+    :undoc-members:
+    :show-inheritance:
