@@ -296,6 +296,8 @@ class KeyframeReduction(object):
         :param bool tangentSplitExisting:
         :param bool tangentSplitAngleThreshold:
         :param int/float tangentSplitAngleThresholdValue:
+        :return: Reduction rate
+        :rtype: float
         """
         # get existing frames
         t = time.time()
@@ -334,19 +336,21 @@ class KeyframeReduction(object):
                 "| path: {0} " \
                 "| process-time: {1:,.2f} seconds " \
                 "| unable-to-reduce >".format(self.path, time.time() - t)
-            return
+            return 0
 
         # remove all keys but the first one and add keyframes
         self._removeKeys(original, start)
         self._addKeys(keyframes, weightedTangents)
 
         # print reduction rate
-        rate = (len(keyframes) / float(len(original))) * 100
+        rate = 100 - ((len(keyframes) / float(len(original))) * 100)
         print "< KeyframeReduction.reduce() " \
             "| path: {0} " \
             "| process-time: {1:,.2f} seconds " \
             "| reduction-rate: {2:,.2f}%  >".format(
                 self.path,
                 time.time() - t,
-                100 - rate
+                rate
             )
+
+        return rate

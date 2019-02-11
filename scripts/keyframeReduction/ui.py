@@ -506,6 +506,7 @@ class KeyframeReductionWidget(QWidget):
         settings = self.settings.getSettings()
 
         # setup progress
+        rate = 0
         num = len(animationCurves)
         self.progress.setRange(0, num)
 
@@ -514,11 +515,14 @@ class KeyframeReductionWidget(QWidget):
             # reduce keyframes
             for i, animationCurve in enumerate(animationCurves):
                 r = KeyframeReduction(animationCurve)
-                r.reduce(**settings)
+                rate += r.reduce(**settings)
 
                 # increment progress
                 self.progress.setFormat(animationCurve)
                 self.progress.setValue(i+1)
+
+        print "< KeyframeReductionWidget.reduce() " \
+              "| overall-reduction-rate: {0:,.2f}% >".format(rate/num)
 
     # ------------------------------------------------------------------------
 
